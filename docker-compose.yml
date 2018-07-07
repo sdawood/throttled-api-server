@@ -1,0 +1,21 @@
+base:
+    build: .
+    volumes:
+        - .:/usr/apiserver
+
+base-env:
+    extends: base
+    env_file: .env
+    environment:
+        - TWILIO_FROM_NUMBER=+61427128480
+
+build:
+    extends: base-env
+    command: bash -c -e "
+        npm run build"
+
+start:
+  extends: build
+  ports:
+      - "8080:8080"
+  command: npm start

@@ -1,0 +1,16 @@
+{
+  "endpoints": {
+    "users": {
+      "capacity": {
+        "limit": 5,
+        "interval": "minute"
+      }
+    },
+    "sms": {
+      "capacity": {
+        "limit": 1,
+        "interval": "minute"
+      }
+    }
+  }
+}

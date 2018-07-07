@@ -1,0 +1,38 @@
+{
+  "name": "throttledusers",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "eslint": "./node_modules/.bin/eslint src --quiet",
+    "test": "npm run eslint && jest ./src --verbose",
+    "build": "babel --copy-files --out-dir lib --ignore *.spec.js src",
+    "start": "export $(cat .env | xargs) && node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "limiter": "^1.1.3",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "twilio": "^3.17.5",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-runtime": "~6.23.0"
+  },
+  "devDependencies": {
+    "babel-cli": "~6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-plugin-transform-async-generator-functions": "^6.24.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "~6.23.0",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-preset-env": "~1.2.2",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "~3.18.0",
+    "jest-cli": "19.0.2",
+    "rxjs": "~5",
+    "supertest": "^3.1.0"
+  }
+}
