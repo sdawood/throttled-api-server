@@ -31,7 +31,14 @@ To build the API Server
   Environment variables should be set by the host environment, loading sensitive data in ecrypted form
 
   For practicality and for the sake of the reviewer, basic twilio trial account parameters are listed in .env file
-  The npm `start` script is using the .evn file for demonstration purposes.
+  To start the server run
+  
+  ```
+  npm run start
+  ```
+  
+  
+  The npm `start` script is using the .env file for demonstration purposes.
   ```
   "start": "export $(cat .env | xargs) && node ./bin/www"
   ```
